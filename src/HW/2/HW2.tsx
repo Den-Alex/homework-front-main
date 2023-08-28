@@ -50,6 +50,7 @@ export const HW2 = () => {
     const filteredUsers = users.myFriends.filter(m => m.address.city === 'Los Angeles')
     setCurrentUsers({ myFriends: filteredUsers });
   };
+
   // 'НУЖНО ПРОФИЛЬТРОВАТЬ ДРУЗЕЙ. ОСТАВЛЯЕМ ТОЛЬКО ТЕХ, КОТОРЫЕ ЖИВУТ В ГОРОДЕ LOS ANGELES';
   return (
     <div id={'hw02'}>
