@@ -20,15 +20,20 @@ export const HW3 = () => {
         // setCurrentText(ЧЕГО-ТО НЕ ХВАТАЕТ);
         setCurrentText(event.currentTarget.value)
     };
-
     const handleSave = () => {
-        // const testTaskText = 'Test task'
-        const text = currentText
-        setTexts([...texts, text])
-        setCurrentText('')
-        // ЗАСЕТАТЬ БЫ ТЕКСТ В texts И НЕ ПОТЕРЯТЬ НАПУТСТВИЕ ИЗ ПРОШЛОГО ВЕКА)
-        // А ЗАТЕМ УБРАТЬ ЗА СОБОЙ В currentText
+        if (currentText.trim() !== '') {
+            setTexts([...texts, currentText]);
+            setCurrentText('');
+        }
     };
+    // const handleSave = () => {
+    //     // const testTaskText = 'Test task'
+    //     const text = currentText
+    //     setTexts([...texts, text])
+    //     setCurrentText('')
+    //     // ЗАСЕТАТЬ БЫ ТЕКСТ В texts И НЕ ПОТЕРЯТЬ НАПУТСТВИЕ ИЗ ПРОШЛОГО ВЕКА)
+    //     // А ЗАТЕМ УБРАТЬ ЗА СОБОЙ В currentText
+    // };
 
     return (
         <div id={'hw03'}>
